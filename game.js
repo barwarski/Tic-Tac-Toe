@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const player2 = "Me"
       var current_player = player2
       var coord 
-      var feld = new Array(9)
+      var field = new Array(9)
       
       document.getElementById("grid1").addEventListener("click",player)
       document.getElementById("grid2").addEventListener("click",player)
@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
       function coordinaten_eintragen(x,p){
         --x
           if(p == player1){
-            feld[x] = 1
+            field[x] = 1
           }else if(p == player2){
-            feld[x] = 2
+            field[x] = 2
         }
-        gewonnen()
+        check_winner()
         checkifempty()
       }
       function checkifempty(){
@@ -52,17 +52,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         var counter = 0
         for(var a=0; a<9; a++){
-          if(feld[a] == 1 || feld[a] == 2){
+          if(field[a] == 1 || field[a] == 2){
             counter++;
           }
         }
       }
 
-      function gewonnen(){
-        if(((feld[0] === feld[1] && feld[1] === feld[2] && feld[2] === 1 ) || (feld[3]==feld[4] && feld[4]==feld[5] && feld[5]== 1) || (feld[6]==feld[7] && feld[7]==feld[8] && feld[8]== 1) || (feld[0] == feld[3] && feld[3]== feld[6] && feld[6]== 1) || (feld[1]==feld[4] && feld[4]==feld[7] && feld[7]== 1) || (feld[2]==feld[5] && feld[5]==feld[8] && feld[8]== 1) || (feld[0]==feld[4] && feld[4]==feld[8] && feld[8]== 1))){
+      function check_winner(){
+        if(((field[0] === field[1] && field[1] === field[2] && field[2] === 1 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 1) || (field[6]==field[7] && field[7]==field[8] && field[8]== 1) || (field[0] == field[3] && field[3]== field[6] && field[6]== 1) || (field[1]==field[4] && field[4]==field[7] && field[7]== 1) || (field[2]==field[5] && field[5]==field[8] && field[8]== 1) || (field[0]==field[4] && field[4]==field[8] && field[8]== 1))){
           alert("Gewinner ist " +player1)
           window.open("main_tictactoe.html","_self")
-        }else if(((feld[0] === feld[1] && feld[1] === feld[2] && feld[2] === 2 ) || (feld[3]==feld[4] && feld[4]==feld[5] && feld[5]== 2) || (feld[6]==feld[7] && feld[7]==feld[8] && feld[8]== 2) || (feld[0] == feld[3] && feld[3]== feld[6] && feld[6]== 2) || (feld[1]==feld[4] && feld[4]==feld[7] && feld[7]== 2) || (feld[2]==feld[5] && feld[5]==feld[8] && feld[8]== 2) || (feld[0]==feld[4] && feld[4]==feld[8] && feld[8]== 2))){
+        }else if(((field[0] === field[1] && field[1] === field[2] && field[2] === 2 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 2) || (field[6]==field[7] && field[7]==field[8] && field[8]== 2) || (field[0] == field[3] && field[3]== field[6] && field[6]== 2) || (field[1]==field[4] && field[4]==field[7] && field[7]== 2) || (field[2]==field[5] && field[5]==field[8] && field[8]== 2) || (field[0]==field[4] && field[4]==field[8] && field[8]== 2))){
           alert("Gewinner ist " +player2)
           window.open("main_tictactoe.html","_self")
         }
