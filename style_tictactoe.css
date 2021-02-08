@@ -1,0 +1,29 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 610px;
+    height: 610px;
+    background-color: rgb(94, 178, 204);
+    margin: auto;
+  }
+  h1{
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15mm;
+    text-align: center;
+    color: rgb(0, 6, 14);
+    font-style:unset ;
+  }
+  .grid div {
+    width: 200px;
+    height: 200px;
+    background-color: azure;
+    margin-bottom: 5px;
+  }
+  body{
+    background-image: url("background.png");
+    align-items: center;
+    justify-content: center;
+  }
