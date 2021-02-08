@@ -1,5 +1,5 @@
 # Tic-Tac-Toe
 
-Using Jacascript
+Using Javascript
 
 **Have fun!**
