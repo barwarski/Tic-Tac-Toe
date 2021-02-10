@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
       const player1 ="You"
-      const player2 = "Me"
+      const player2 = "Mee"
       var current_player = player2
       var coord 
       var field = new Array(9)
