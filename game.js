@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       function check_winner(){
-        if(((field[0] === field[1] && field[1] === field[2] && field[2] === 1 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 1) || (field[6]==field[7] && field[7]==field[8] && field[8]== 1) || (field[0] == field[3] && field[3]== field[6] && field[6]== 1) || (field[1]==field[4] && field[4]==field[7] && field[7]== 1) || (field[2]==field[5] && field[5]==field[8] && field[8]== 1) || (field[0]==field[4] && field[4]==field[8] && field[8]== 1))){
+        if(((field[0] === field[1] && field[1] === field[2] && field[2] === 1 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 1) || (field[6]==field[7] && field[7]==field[8] && field[8]== 1) || (field[0] == field[3] && field[3]== field[6] && field[6]== 1) || (field[1]==field[4] && field[4]==field[7] && field[7]== 1) || (field[2]==field[5] && field[5]==field[8] && field[8]== 1) || (field[0]==field[4] && field[4]==field[8] && field[8]== 1) || (field[2]==field[4]&& field[4]==field[6]&& field[6]==1))){
           alert("Gewinner ist " +player1)
           window.open("main_tictactoe.html","_self")
-        }else if(((field[0] === field[1] && field[1] === field[2] && field[2] === 2 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 2) || (field[6]==field[7] && field[7]==field[8] && field[8]== 2) || (field[0] == field[3] && field[3]== field[6] && field[6]== 2) || (field[1]==field[4] && field[4]==field[7] && field[7]== 2) || (field[2]==field[5] && field[5]==field[8] && field[8]== 2) || (field[0]==field[4] && field[4]==field[8] && field[8]== 2))){
+        }else if(((field[0] === field[1] && field[1] === field[2] && field[2] === 2 ) || (field[3]==field[4] && field[4]==field[5] && field[5]== 2) || (field[6]==field[7] && field[7]==field[8] && field[8]== 2) || (field[0] == field[3] && field[3]== field[6] && field[6]== 2) || (field[1]==field[4] && field[4]==field[7] && field[7]== 2) || (field[2]==field[5] && field[5]==field[8] && field[8]== 2) || (field[0]==field[4] && field[4]==field[8] && field[8]== 2) || (field[2]==field[4]&& field[4]==field[6]&& field[6]==2))){
           alert("Gewinner ist " +player2)
           window.open("main_tictactoe.html","_self")
         }
